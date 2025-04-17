@@ -7,7 +7,6 @@ enum CarType
 
 interface IElectricVehicle
 {
-
     void Recharge();
 }
 
@@ -42,9 +41,12 @@ static class CarFactory
 
         public override void Drive()
         {
-            if(FuelPercentage <= 0){
+            if (FuelPercentage <= 0)
+            {
                 Console.WriteLine("You're running out of fuel");
-            } else {
+            }
+            else
+            {
                 FuelPercentage -= 25;
                 Console.WriteLine("Vroom....");
                 Console.WriteLine("Your Fuel Percentage is: {0}", FuelPercentage);
@@ -98,7 +100,8 @@ static class CarFactory
 
         public override void Drive()
         {
-            if(BatteryPercentage <= 0 && FuelPercentage <= 0 ){
+            if (BatteryPercentage <= 0 && FuelPercentage <= 0)
+            {
                 Console.WriteLine("You're running out of fuel and battery power");
             }
             else if (BatteryPercentage <= 0)
